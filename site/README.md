@@ -1,6 +1,7 @@
 # screenagents — landing page
 
 The project's marketing site: ASCII art, light and dark themes, one page per topic.
+Live at **<https://screenagents.pages.dev>** (Cloudflare Pages project `screenagents`).
 
 React 18 + Vite + react-router. Fully static — no runtime dependencies beyond the
 bundle itself.

@@ -21,7 +21,7 @@
 
 **CLI · Python library · MCP server** — one tiny package.
 
-[Install](#install) · [Quick start](#quick-start) · [Backends](#backends) · [Python API](#python-library) · [MCP server](#mcp-server) · [Troubleshooting](#troubleshooting) · [Landing page](https://github.com/Parithosh-Varma/screenagents/tree/main/site)
+[Install](#install) · [Quick start](#quick-start) · [Backends](#backends) · [Python API](#python-library) · [MCP server](#mcp-server) · [Troubleshooting](#troubleshooting) · **[Landing page](https://screenagents.pages.dev)**
 
 </div>
 
@@ -231,14 +231,16 @@ non-PNG output still works, it just has no size metadata.
 
 ## Landing page
 
-The `site/` directory holds the project's ASCII-art landing page (React + Vite,
-light and dark themes, one page per topic).
+The project's landing page lives in [`site/`](site/): React + Vite, ASCII art
+throughout, light and dark themes, one page per topic — deployed to Cloudflare Pages
+at **<https://screenagents.pages.dev>**.
 
 ```bash
 cd site
 npm install
 npm run dev       # local development
 npm run build     # static build in site/dist
+npx wrangler pages deploy dist --project-name screenagents
 ```
 
 ## Development
