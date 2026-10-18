@@ -6,6 +6,11 @@ build/
 dist/
 .eggs/
 
+# Node (landing page in site/)
+node_modules/
+site/dist/
+site/.vite/
+
 # Virtualenvs
 .venv/
 venv/

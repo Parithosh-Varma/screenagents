@@ -1,0 +1,34 @@
+name: Bug report
+description: Something captured nothing, the wrong thing, or crashed.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Backend problems are almost always environment
+        problems — the doctor output answers most questions before they are asked.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you run, what did you expect, what happened instead?
+      placeholder: |
+        $ screenagents -r 0,0,800,600
+        screenagents: backend 'scrot' failed (exit 1): ...
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: screenagents --doctor
+      description: Paste the full output. It contains platform, session, and per-backend reasons.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `screenagents --version`
+    validations:
+      required: true

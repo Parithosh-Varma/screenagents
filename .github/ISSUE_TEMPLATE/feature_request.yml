@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a backend, a flag, or an integration.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task, not just the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would help?
+      description: A flag, an API, a backend, an MCP tool…
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS and display server (Wayland/X11), if relevant.
+    validations:
+      required: false
