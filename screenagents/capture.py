@@ -135,8 +135,9 @@ def screenshot(
     except OSError as exc:
         raise CaptureError(f"cannot create {destination.parent}: {exc}") from exc
 
+    # No leading dot: macOS screencapture(1) refuses to write to a hidden path.
     temp = destination.parent / (
-        f".screenagents-{uuid.uuid4().hex}.{fmt}"
+        f"screenagents-tmp-{uuid.uuid4().hex}.{fmt}"
     )
     request = backends.CaptureRequest(
         output=str(temp),

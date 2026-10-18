@@ -28,3 +28,4 @@ htmlcov/
 *.jpg
 !docs/**/*.png
 .screenagents-*
+screenagents-tmp-*

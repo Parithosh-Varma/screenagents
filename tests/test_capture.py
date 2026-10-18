@@ -123,7 +123,7 @@ def test_backend_failure_raises_and_cleans_up(tmp_path, fake_backend, monkeypatc
 
     assert "boom" in str(excinfo.value)
     assert not dest.exists()
-    assert list(tmp_path.glob(".screenagents-*")) == []
+    assert list(tmp_path.glob("screenagents-tmp-*")) == []
 
 
 def test_missing_output_file_is_treated_as_failure(tmp_path, fake_backend, monkeypatch):

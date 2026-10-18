@@ -67,7 +67,7 @@ If you need to screenshot a *web page*, use Playwright. If you need a picture of
   (Wayland vs X11), with capability checks for region / monitor / named output.
 - **Honest failures.** Typed exceptions with the backend's own stderr, plus a
   `--doctor` command that explains exactly why each backend is or is not available.
-- **Atomic writes.** Captures land in a hidden temp file and are renamed into place
+- **Atomic writes.** Captures land in a temporary `screenagents-tmp-*.png` file and are renamed into place
   only on success — a failed capture never leaves a half-written PNG or clobbers an
   existing file.
 - **Metadata included.** Dimensions parsed from the PNG header, byte size, region and
@@ -79,8 +79,8 @@ If you need to screenshot a *web page*, use Playwright. If you need a picture of
 ## Install
 
 ```bash
-pip install screenagents            # core: CLI + library
-pip install "screenagents[mcp]"     # + MCP server for agents
+pip install screenagents            # core: CLI + library (Python 3.9+)
+pip install "screenagents[mcp]"     # + MCP server (needs Python 3.10+)
 ```
 
 Requires Python 3.9+. macOS and Windows need nothing else. On Linux, install one of

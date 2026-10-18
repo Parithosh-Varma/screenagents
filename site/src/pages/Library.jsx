@@ -68,10 +68,11 @@ export default function Library() {
         <div className="grid-2">
           <Code title="python" lines={FORCE} />
           <div className="note">
-            Captures land in a hidden <code>.screenagents-*.png</code> temp file
-            and are renamed into place only after the backend exits cleanly. A
-            failed capture never leaves a half-written image, and never clobbers
-            the file that was already there.
+            Captures land in a <code>screenagents-tmp-*.png</code> temp file next
+            to the destination and are renamed into place only after the backend
+            exits cleanly — never a dotfile, which macOS screencapture refuses to
+            write. A failed capture never leaves a half-written image, and never
+            clobbers the file that was already there.
           </div>
         </div>
       </Section>

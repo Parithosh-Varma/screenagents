@@ -25,7 +25,9 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-mcp = ["mcp>=1.0,<2"]
+# The mcp package itself requires Python 3.10+, so the extras marker keeps
+# `pip install "screenagents[mcp]"` working (as a no-op) on 3.9.
+mcp = ["mcp>=1.0,<2; python_version >= '3.10'"]
 dev = ["pytest>=7"]
 
 [project.scripts]
